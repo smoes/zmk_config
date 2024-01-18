@@ -38,6 +38,62 @@
 
             label = "WINDOW_RIGHT";
         };
+
+        window_down: window_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_tap>,
+                <&kp DOWN>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "WINDOW_DOWN";
+        };
+
+        window_up: window_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_tap>,
+                <&kp UP_ARROW>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "WINDOW_UP";
+        };
+
+        window_left_screen: window_left_screen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp LEFT_ARROW>,
+                <&macro_release>,
+                <&kp LGUI &kp LSHFT>;
+
+            label = "WINDOW_LEFT_SCREEN";
+        };
+
+        window_right_screen: window_right_screen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp RIGHT>,
+                <&macro_release>,
+                <&kp LGUI &kp LSHFT>;
+
+            label = "WINDOW_RIGHT_SCREEN";
+        };
     };
 
     keymap {
@@ -90,11 +146,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans     &trans    &trans        &trans     &trans   &trans                                  &trans       &trans     &trans     &trans    &trans     &trans
-&kp GRAVE  &kp N1    &kp UP_ARROW  &kp N3     &kp N4   &kp N5                                  &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
-&kp F1     &kp LEFT  &kp DOWN      &kp RIGHT  &kp F5   &kp F6                                  &trans       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
-&kp F7     &kp F8    &kp F9        &kp F10    &kp F11  &kp F12  &window_left    &window_right  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
-                                   &trans     &trans   &trans   &trans          &trans         &trans       &trans     &trans
+&trans     &trans               &trans        &trans                &trans   &trans                                  &trans          &trans          &trans        &trans     &trans    &trans
+&kp GRAVE  &window_left_screen  &window_up    &window_right_screen  &kp N4   &kp N5                                  &kp N6          &kp N7          &kp N8        &kp N9     &kp N0    &trans
+&kp F1     &window_left         &window_down  &window_right         &kp F5   &kp F6                                  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans    &trans
+&kp F7     &kp F8               &kp F9        &kp F10               &kp F11  &kp F12  &window_left    &window_right  &kp KP_PLUS     &kp MINUS       &kp EQUAL     &kp LBKT   &kp RBKT  &kp BSLH
+                                              &trans                &trans   &trans   &trans          &trans         &trans          &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

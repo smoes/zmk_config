@@ -129,7 +129,7 @@
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4                                     &trans     &trans                &trans                 &trans     &trans           &trans
 &kp F1      &kp F2            &kp F3             &kp F4             &kp CARET     &kp MINUS                                        &kp UNDER  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp F10    &kp F11          &kp F12
-&kp GRAVE   &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR    &kp PRCNT                                        &kp AMPS   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp CARET  &kp KP_MULTIPLY  &kp TILDE
+&kp GRAVE   &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR    &kp PRCNT                                        &kp AMPS   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp EQUAL  &kp KP_MULTIPLY  &kp TILDE
 &trans      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &kp STAR      &trans        &kp LESS_THAN    &kp GREATER_THAN  &kp PIPE   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PLUS   &kp MINUS        &kp PIPE
                                                  &trans             &trans        &trans        &trans           &trans            &trans     &trans                &trans
             >;

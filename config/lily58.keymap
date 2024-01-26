@@ -97,17 +97,6 @@
     };
 
     behaviors {
-        esc_or_1: esc_or_1 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "ESC_OR_1";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            hold-trigger-key-positions = <52>;
-            tapping-term-ms = <200>;
-            retro-tap;
-        };
     };
 
     keymap {
